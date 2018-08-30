@@ -1,5 +1,5 @@
 FROM ubuntu:14.04 
-MAINTAINER Username ec2-user 
+MAINTAINER Username ubuntu 
 RUN apt-get update && \ 
 apt-get -y install apache2 \ 
 php5 \ 
