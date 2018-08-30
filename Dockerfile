@@ -2,15 +2,4 @@ FROM ubuntu:14.04
 MAINTAINER Username ubuntu 
 RUN apt-get update && \ 
 apt-get -y install apache2 \ 
-php7 \ 
-php7-mysql \ 
-mysql-client \ 
-mysql-server \ 
-wget RUN wget http://wordpress.org/latest.tar.gz && \ 
-tar xzvf latest.tar.gz && \ 
-cp -R ./wordpress/* /var/www/html && \ 
-rm /var/www/html/index.html 
-RUN chown -R www-data:www-data /var/www/html 
-EXPOSE 80 
-ENTRYPOINT /bin/bash 
-VOLUME /var/lib/mysql
+RUN service apache2 start
